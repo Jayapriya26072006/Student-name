@@ -1,4 +1,3 @@
-#include <stdio.h>
 struct Student {
     char name[20];
     int roll, m1, m2, m3, total;
