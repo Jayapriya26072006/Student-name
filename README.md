@@ -1,13 +1,25 @@
-uct Student {
-    char name[20];
-    int roll, m1, m2, m3, total;
-    float avg;
-};
+include <stdio.h>
+struct student {
+    char name[50];
+    int roll;
+    float marks;
+} s;
+
 int main() {
-    struct Student s;
-    printf("Enter name, roll, 3 subject marks:\n");
-    scanf("%s %d %d %d %d", s.name, &s.roll, &s.m1, &s.m2, &s.m3);
-    s.total = s.m1 + s.m2 + s.m3;
-    s.avg = s.total / 3.0;
-    printf("\nName: %s\nRoll: %d\nTo s.name, s.roll, s.total, s.avg);
-    return
+    printf("Enter information:\n");
+    printf("Enter name: ");
+    fgets(s.name, sizeof(s.name), stdin);
+
+    printf("Enter roll number: ");
+    scanf("%d", &s.roll);
+    printf("Enter marks: ");
+    scanf("%f", &s.marks);
+
+    printf("Displaying Information:\n");
+    printf("Name: ");
+    printf("%s", s.name);
+    printf("Roll number: %d\n", s.roll);
+    printf("Marks: %.1f\n", s.marks);
+
+    return 0;
+}
